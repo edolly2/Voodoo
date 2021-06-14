@@ -1,0 +1,109 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Roboto';
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-family: 'Voodoo Vampire';
+    font-size: clamp(4rem, 3.8vw, 6rem);
+    font-weight: 590;
+    color: rgb(83, 0, 83);
+    text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black, 1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black, 1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black, -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black, -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black, -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black, 0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black, 6px 6px 6px lime, -6px 6px 6px lime, 6px -6px 6px lime, 1px 6px 6px lime, 6px 1px 6px lime, -1px 6px 6px lime, 6px -1px 6px lime, 1px -6px 6px lime, -6px 1px 6px lime, -1px -6px 6px lime, -6px -1px 6px lime, 1px 1px 6px lime, -1px -1px 6px lime, -1px 1px 6px lime, 1px -1px 6px lime, 0px 6px 6px lime, 6px 0px 6px lime, -6px 0px 6px lime, 0px -6px 6px lime, 0px 1px 6px lime, 1px 0px 6px lime, 0px -1px 6px lime, -1px 0px 6px lime, 0px 0px 6px lime, 5px 5px 10px black;
+    padding: 2rem 2rem 1rem 2rem;
+}
+
+h2 {
+    font-size: clamp(2.8rem, 2.6vw, 3.6rem);
+    padding: 0 2rem 2rem 2rem;
+}
+
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+button,
+a,
+label,
+input {
+    /* font-size: clamp(1.6rem, 1.3vw, 2rem); */
+    font-size: 1.6rem;
+}
+
+header {
+    text-align: center;
+    background-color: rgb(41, 41, 41);
+    box-shadow: inset 0 0 20px black;
+    height: 20rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-list {
+    padding: 0 2rem 2rem 2rem;
+    color: lime;
+    text-shadow: 2px 2px 2px purple, -2px 2px 2px purple, 2px -2px 2px purple, 1px 2px 2px purple, 2px 1px 2px purple, -1px 2px 2px purple, 2px -1px 2px purple, 1px -2px 2px purple, -2px 1px 2px purple, -1px -2px 2px purple, -2px -1px 2px purple, 1px 1px 2px purple, -1px -1px 2px purple, -1px 1px 2px purple, 1px -1px 2px purple, 0px 2px 2px purple, 2px 0px 2px purple, -2px 0px 2px purple, 0px -2px 2px purple, 0px 1px 2px purple, 1px 0px 2px purple, 0px -1px 2px purple, -1px 0px 2px purple, 0px 0px 2px purple, 5px 5px 10px black;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+.list-items {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.logo-cont {
+    width: 8rem;
+    height: 20rem;
+    position: absolute;
+    top: 0;
+    right: 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.list-items:hover {
+}
