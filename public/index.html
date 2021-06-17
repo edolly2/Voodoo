@@ -7,9 +7,9 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/RESET.css">
     <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
         rel="stylesheet" />
@@ -35,9 +35,8 @@
                 <img src="assets/images/voodoo_work.png"
                     alt="#" class="logo" />
             </div>
-            <div class="title-cont">
+            <div class="header-title-cont">
                 <h1>Bellevue Voodoo</h1>
-                <h2>- USSSA 9&Under Baseball League -</h2>
             </div>
             <div class="nav-cont">
                 <nav>
@@ -51,8 +50,11 @@
                 </nav>
             </div>
         </header>
-
+        
         <main>
+            <div class="main-title-cont">
+                <h2>- USSSA 9&Under Baseball League -</h2>
+            </div>
             <div class="zombie-p-cont">
                 <img src="assets/images/zombie-p.png"
                     alt="#" class="zombie-p" />
@@ -76,21 +78,34 @@
                 </div>
             </div>
         </main>
-
-        <footer>
-
-        </footer>
-    </div>
-    <!-- <div class="social-cont">
-        <a href="https://www.facebook.com/dev.dollinger"
-            alt="My Facebook Page" target="_blank"><i
-                class="fab fa-facebook-square fa-5x"
-                title="Facebook"></i></a>
-        <a href="https://twitter.com/DevDollinger"
-            alt="My Twitter Page" target="_blank"><i
-                class="fab fa-twitter-square fa-5x"
-                title="Twitter"></i></a>
-    </div> -->
+            <div class="signup-form-cont">
+                <form action="" class="signup-form">
+                    <label for="gname">Guardian First Name:</label>
+                    <input type="text" name="gfname" id="gfname">
+                    <label for="lname">Guardian Last Name:</label>
+                    <input type="text" name="glname" id="glname">
+                    <label for="email">Guardian Email:</label>
+                    <input type="email" name="email" id="email">
+                    <label for="number">Guardian Phone Number:</label>
+                    <input type="tel" name="number" id="number">
+                    <p>Player Info</p>
+                    <label for="pfname">Player First Name:</label>
+                    <input type="text" name="pfname" id="pfname">
+                    <label for="lname">Player Last Name:</label>
+                    <input type="text" name="plname" id="plname">
+                    <label for="bday">Date of Birth:</label>
+                    <input type="date" name="bday" id="bday">
+                    <label for="throws">Throws:</label>
+                    <input type="radio" name="throws" id="throws">
+                    <option name="throws" value="Right"></option>
+                    <option name="throws" value="Left"></option>
+                    <label for="bats">Bats:</label>
+                    <input type="radio" name="bats" id="throws">
+                    <option name="bats" value="Right"></option>
+                    <option name="bats" value="Left"></option>
+                    <input type="submit" value="Sign-Up">
+                </form>
+            </div>
     </div>
 </body>
 
