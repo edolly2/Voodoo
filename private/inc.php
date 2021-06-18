@@ -1,4 +1,6 @@
 <?php
+ob_start(); //OUTPUT BUFFERING ON
+
 //FILESYSTEM PATH TRAVERSE
 define("PRIVATE_PATH", dirname(__FILE__));
 define("ROOT_PATH", dirname(PRIVATE_PATH));
@@ -12,11 +14,5 @@ define("WWW_ROOT", $doc_root);
 
 // FUNCTIONS
 require_once 'functions.php';
-
-// PAGE SNIPPETS/MODULES
-require_once SHARED_PATH . '/Header.php';
-require_once SHARED_PATH . '/HomeMain.php';
-require_once SHARED_PATH . '/Footer.php';
-require_once SHARED_PATH . '/SignupForm.php';
 
 ?>

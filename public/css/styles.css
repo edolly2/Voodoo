@@ -85,6 +85,10 @@ main {
     5px 5px 10px black;
 }
 
+.main-p-2 a {
+  color: lime;
+}
+
 .main-btn {
   padding: 1rem 3rem;
   border-radius: 0.6rem;
@@ -355,4 +359,8 @@ form {
   text-align: center;
   display: grid;
   grid-template-columns: 1fr;
+}
+
+a {
+  text-decoration: none;
 }

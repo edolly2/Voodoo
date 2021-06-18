@@ -5,3 +5,4 @@ private/shared/Footer.php
 private/shared/Header.php
 private/shared/SignupForm.php
 private/shared/HomeMain.php
+private/inc.php
