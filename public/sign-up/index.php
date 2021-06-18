@@ -3,4 +3,5 @@
 <?php include SHARED_PATH . "/Header.php"; ?>
 <?php include SHARED_PATH . "/MainAll.php"; ?>
 <?php include SHARED_PATH . "/SignupForm.php"; ?>
+<?php include SHARED_PATH . "/SignupCancel.php"; ?>
 <?php include SHARED_PATH . "/Footer.php"; ?>

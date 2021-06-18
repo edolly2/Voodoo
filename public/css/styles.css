@@ -58,7 +58,8 @@ main {
 }
 
 .main-content-cont h2,
-.main-p-2 {
+.main-p-2,
+.form-title, .signup-cancel-p1, .signup-cancel-p2 {
   padding: 2rem 2rem 1rem 2rem;
   font-family: nosifer;
   color: lime;
@@ -113,7 +114,7 @@ main {
     0px -6px 6px lime, 0px 1px 6px lime, 1px 0px 6px lime, 0px -1px 6px lime,
     -1px 0px 6px lime, 0px 0px 6px lime, 5px 5px 10px black;
   background-color: rgb(255, 90, 100);
-  cursor: url("../assets/images/zombie-hand.png"), auto;
+  cursor: pointer;
   color: lime;
 }
 
@@ -127,7 +128,7 @@ main {
 }
 
 .main-p-2:hover {
-  cursor: url("../assets/images/zombie-hand.png"), auto;
+  cursor: pointer;
 }
 
 .zombie-p-cont {
@@ -340,7 +341,8 @@ footer {
   backdrop-filter: blur(10px);
   border: 2px solid black;
   box-shadow: inset 0 0 100px black, 5px 5px 10px black;
-  display: none;
+  z-index: 1;
+  /* display: none; */
 }
 
 .signup-form {
@@ -348,19 +350,237 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 60%;
   height: 75%;
+  background-color: rgb(41, 41, 41);
+  box-shadow: inset 0 0 100px black, 0px 0px 60px black;
+  border: 2px solid black;
+  border-radius: 1.2rem;
+}
+
+.signup-form p {
+  padding: 2rem;
+  color: white;
 }
 
 input {
-  width: 100%;
+  width: 75%;
+  border-radius: 0.6rem;
+  height: 2.8rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
+
+input:focus {
+outline: none;
+box-shadow: inset 0 0 10px rgb(255, 0, 78);
+}
+
 form {
   text-align: center;
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 a {
   text-decoration: none;
+}
+
+.form-title {
+  padding: 2rem;
+}
+
+.form-exit-btn-cont {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: 4rem;
+}
+
+.form-exit-btn {
+  color: lime;
+  text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+    1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+    1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+    -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+    -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+    -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+    5px 5px 10px black;
+}
+
+.form-exit-btn:hover {
+  text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+    1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+    1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+    -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+    -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+    -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+    0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black,
+    6px 6px 6px rgb(255, 0, 78), -6px 6px 6px rgb(255, 0, 78),
+    6px -6px 6px rgb(255, 0, 78), 1px 6px 6px rgb(255, 0, 78),
+    6px 1px 6px rgb(255, 0, 78), -1px 6px 6px rgb(255, 0, 78),
+    6px -1px 6px rgb(255, 0, 78), 1px -6px 6px rgb(255, 0, 78),
+    -6px 1px 6px rgb(255, 0, 78), -1px -6px 6px rgb(255, 0, 78),
+    -6px -1px 6px rgb(255, 0, 78), 1px 1px 6px rgb(255, 0, 78),
+    -1px -1px 6px rgb(255, 0, 78), -1px 1px 6px rgb(255, 0, 78),
+    1px -1px 6px rgb(255, 0, 78), 0px 6px 6px rgb(255, 0, 78),
+    6px 0px 6px rgb(255, 0, 78), -6px 0px 6px rgb(255, 0, 78),
+    0px -6px 6px rgb(255, 0, 78), 0px 1px 6px rgb(255, 0, 78),
+    1px 0px 6px rgb(255, 0, 78), 0px -1px 6px rgb(255, 0, 78),
+    -1px 0px 6px rgb(255, 0, 78), 0px 0px 6px rgb(255, 0, 78),
+    5px 5px 10px black;
+  cursor: pointer;
+}
+
+.form-info-wrapper,
+.radio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-info-wrapper {
+  padding-top: 2rem;
+  justify-content: space-evenly;
+}
+
+#tleft,
+#tright,
+#bleft,
+#bright {
+  width: auto;
+}
+
+#tright,
+#bright {
+  margin-left: 1rem;
+}
+
+.form-btn-group {
+  display: flex;
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#submit,
+#cancel {
+  width: 12rem;
+  margin: 0 1rem;
+  height: 3.6rem;
+  background-color: lime;
+  box-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+    1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+    1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+    -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+    -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+    -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+    5px 5px 10px black;
+}
+
+#submit:hover,
+#cancel:hover {
+  box-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+    1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+    1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+    -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+    -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+    -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+    0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black,
+    6px 6px 6px rgb(255, 0, 78), -6px 6px 6px rgb(255, 0, 78),
+    6px -6px 6px rgb(255, 0, 78), 1px 6px 6px rgb(255, 0, 78),
+    6px 1px 6px rgb(255, 0, 78), -1px 6px 6px rgb(255, 0, 78),
+    6px -1px 6px rgb(255, 0, 78), 1px -6px 6px rgb(255, 0, 78),
+    -6px 1px 6px rgb(255, 0, 78), -1px -6px 6px rgb(255, 0, 78),
+    -6px -1px 6px rgb(255, 0, 78), 1px 1px 6px rgb(255, 0, 78),
+    -1px -1px 6px rgb(255, 0, 78), -1px 1px 6px rgb(255, 0, 78),
+    1px -1px 6px rgb(255, 0, 78), 0px 6px 6px rgb(255, 0, 78),
+    6px 0px 6px rgb(255, 0, 78), -6px 0px 6px rgb(255, 0, 78),
+    0px -6px 6px rgb(255, 0, 78), 0px 1px 6px rgb(255, 0, 78),
+    1px 0px 6px rgb(255, 0, 78), 0px -1px 6px rgb(255, 0, 78),
+    -1px 0px 6px rgb(255, 0, 78), 0px 0px 6px rgb(255, 0, 78),
+    5px 5px 10px black;
+  cursor: pointer;
+  color: rgb(255, 0, 78);
+}
+
+.signup-cancel-cont {
+  border-radius: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  border-radius: 1.2rem;
+  background: rgba(128, 0, 128, 0.8);
+  backdrop-filter: blur(10px);
+  border: 2px solid black;
+  box-shadow: inset 0 0 100px black, 5px 5px 10px black;
+}
+
+.signup-cancel-p2 {
+display: none;
+}
+
+.signup-cancel-p2, .signup-cancel-p1 {
+  word-spacing: 0.5rem;
+}
+
+.are-you-sure-btns {
+  width: 12rem;
+  margin: 2rem 1rem;
+  height: 3.6rem;
+  background-color: lime;
+  box-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+    1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+    1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+    -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+    -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+    -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+    5px 5px 10px black;
+}
+
+.are-you-sure-btns:hover {
+  box-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+    1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+    1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+    -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+    -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+    -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+    0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black,
+    6px 6px 6px rgb(255, 0, 78), -6px 6px 6px rgb(255, 0, 78),
+    6px -6px 6px rgb(255, 0, 78), 1px 6px 6px rgb(255, 0, 78),
+    6px 1px 6px rgb(255, 0, 78), -1px 6px 6px rgb(255, 0, 78),
+    6px -1px 6px rgb(255, 0, 78), 1px -6px 6px rgb(255, 0, 78),
+    -6px 1px 6px rgb(255, 0, 78), -1px -6px 6px rgb(255, 0, 78),
+    -6px -1px 6px rgb(255, 0, 78), 1px 1px 6px rgb(255, 0, 78),
+    -1px -1px 6px rgb(255, 0, 78), -1px 1px 6px rgb(255, 0, 78),
+    1px -1px 6px rgb(255, 0, 78), 0px 6px 6px rgb(255, 0, 78),
+    6px 0px 6px rgb(255, 0, 78), -6px 0px 6px rgb(255, 0, 78),
+    0px -6px 6px rgb(255, 0, 78), 0px 1px 6px rgb(255, 0, 78),
+    1px 0px 6px rgb(255, 0, 78), 0px -1px 6px rgb(255, 0, 78),
+    -1px 0px 6px rgb(255, 0, 78), 0px 0px 6px rgb(255, 0, 78),
+    5px 5px 10px black;
+    color: rgb(255, 0, 78);
+  cursor: pointer;
+}
+
+.player-info-cont {
+  /* margin-top: 3.5rem; */
+  border-left: 2px solid black;
+  padding-left: 5rem;
+}
+
+dt {
+  color: white;
+  font-size: 1.6rem;
+}
+
+
+.radio-options-cont {
+  display: flex;
+  justify-content: space-evenly;
 }
