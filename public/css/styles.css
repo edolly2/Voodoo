@@ -59,7 +59,10 @@ main {
 
 .main-content-cont h2,
 .main-p-2,
-.form-title, .signup-cancel-p1, .signup-cancel-p2 {
+.form-title,
+.signup-cancel-p1,
+.signup-cancel-p2,
+.contact-icons h3 {
   padding: 2rem 2rem 1rem 2rem;
   font-family: nosifer;
   color: lime;
@@ -113,9 +116,9 @@ main {
     1px -1px 6px lime, 0px 6px 6px lime, 6px 0px 6px lime, -6px 0px 6px lime,
     0px -6px 6px lime, 0px 1px 6px lime, 1px 0px 6px lime, 0px -1px 6px lime,
     -1px 0px 6px lime, 0px 0px 6px lime, 5px 5px 10px black;
-  background-color: rgb(255, 90, 100);
+  background-color: #ff5a64;
   cursor: pointer;
-  color: lime;
+  color: #00ff00;
 }
 
 .main-p-1 {
@@ -129,6 +132,27 @@ main {
 
 .main-p-2:hover {
   cursor: pointer;
+  transform: scale(1.2, 1.2);
+  text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+    1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+    1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+    -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+    -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+    -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+    0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black,
+    6px 6px 6px #ff5a64, -6px 6px 6px #ff5a64, 6px -6px 6px #ff5a64,
+    1px 6px 6px #ff5a64, 6px 1px 6px #ff5a64, -1px 6px 6px #ff5a64,
+    6px -1px 6px #ff5a64, 1px -6px 6px #ff5a64, -6px 1px 6px #ff5a64,
+    -1px -6px 6px #ff5a64, -6px -1px 6px #ff5a64, 1px 1px 6px #ff5a64,
+    -1px -1px 6px #ff5a64, -1px 1px 6px #ff5a64, 1px -1px 6px #ff5a64,
+    0px 6px 6px #ff5a64, 6px 0px 6px #ff5a64, -6px 0px 6px #ff5a64,
+    0px -6px 6px #ff5a64, 0px 1px 6px #ff5a64, 1px 0px 6px #ff5a64,
+    0px -1px 6px #ff5a64, -1px 0px 6px #ff5a64, 0px 0px 6px #ff5a64,
+    5px 5px 10px black;
+}
+
+.main-p-2 a:hover {
+  color: #5dda5d;
 }
 
 .zombie-p-cont {
@@ -224,6 +248,19 @@ nav {
     -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
     0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black,
     5px 5px 10px black;
+}
+
+.nav-list a {
+  color: rgb(83, 0, 83);
+}
+
+button {
+  font-weight: 900;
+}
+
+.nav-list a:hover {
+  color: #ff004e;
+  transform: scale(1.2, 1.2);
 }
 
 .list-items {
@@ -372,8 +409,8 @@ input {
 }
 
 input:focus {
-outline: none;
-box-shadow: inset 0 0 10px rgb(255, 0, 78);
+  outline: none;
+  box-shadow: inset 0 0 10px rgb(255, 0, 78);
 }
 
 form {
@@ -500,7 +537,7 @@ a {
     -1px 0px 6px rgb(255, 0, 78), 0px 0px 6px rgb(255, 0, 78),
     5px 5px 10px black;
   cursor: pointer;
-  color: rgb(255, 0, 78);
+  color: #ff004e;
 }
 
 .signup-cancel-cont {
@@ -522,10 +559,11 @@ a {
 }
 
 .signup-cancel-p2 {
-display: none;
+  display: none;
 }
 
-.signup-cancel-p2, .signup-cancel-p1 {
+.signup-cancel-p2,
+.signup-cancel-p1 {
   word-spacing: 0.5rem;
 }
 
@@ -564,7 +602,7 @@ display: none;
     1px 0px 6px rgb(255, 0, 78), 0px -1px 6px rgb(255, 0, 78),
     -1px 0px 6px rgb(255, 0, 78), 0px 0px 6px rgb(255, 0, 78),
     5px 5px 10px black;
-    color: rgb(255, 0, 78);
+  color: rgb(255, 0, 78);
   cursor: pointer;
 }
 
@@ -579,8 +617,31 @@ dt {
   font-size: 1.6rem;
 }
 
-
 .radio-options-cont {
   display: flex;
   justify-content: space-evenly;
+}
+
+.hidden {
+  display: none;
+}
+.contact-icons-cont {
+  background-color: rgb(83, 0, 83);
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* .contact-icons h2 {
+  font-family: nosifer;
+} */
+
+.contact-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

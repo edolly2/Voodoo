@@ -2,4 +2,5 @@
 <?php $pageTitle = "Voodoo Baseball Contact"; ?>
 <?php include SHARED_PATH . "/Header.php"; ?>
 <?php include SHARED_PATH . "/MainAll.php"; ?>
+<?php include SHARED_PATH . "/Contact.php"; ?>
 <?php include SHARED_PATH . "/Footer.php"; ?>
