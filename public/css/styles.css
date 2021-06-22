@@ -371,7 +371,7 @@ footer {
   left: 50%;
   top: 50%;
   width: 75%;
-  height: 90%;
+  height: 95%;
   transform: translate(-50%, -50%);
   border-radius: 1.2rem;
   background: rgba(128, 0, 128, 0.8);
@@ -384,18 +384,18 @@ footer {
 
 .signup-form {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -75%);
   width: 60%;
-  height: 75%;
+  height: 85%;
   background-color: rgb(41, 41, 41);
   box-shadow: inset 0 0 100px black, 0px 0px 60px black;
   border: 2px solid black;
   border-radius: 1.2rem;
 }
 
-.signup-form p {
+.signup-form-title {
   padding: 2rem;
   color: white;
 }
@@ -498,7 +498,7 @@ a {
 .form-btn-group {
   display: flex;
   position: absolute;
-  bottom: 4rem;
+  bottom: 2rem;
   left: 50%;
   transform: translate(-50%);
 }
@@ -622,7 +622,7 @@ a {
 
 dt {
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .radio-options-cont {
@@ -744,4 +744,18 @@ textarea:focus {
   right: 1rem;
   top: 0;
   font-size: 4rem;
+}
+
+.red {
+  color: red;
+}
+
+.errors {
+  font-size: 1.2rem;
+  color: #ff004e;
+  padding: 2rem;
+}
+
+.radio-wrapper {
+  padding: 1rem;
 }

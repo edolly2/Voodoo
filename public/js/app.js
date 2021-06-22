@@ -46,18 +46,18 @@ $(document).ready(() => {
   });
 });
 
-const signUpSubmitBtn = $("#submit");
-const signUpSuccessModal = $(".success-cont");
-$(document).ready(() => {
-  $(signUpSubmitBtn).on("click", (event) => {
-    $(signUpForm).hide(500);
-    $(signUpSuccessModal).css("display", "flex");
-    // window.location.preventDefault(event);
-    setTimeout(function () {
-      window.location.replace("../index.php");
-    }, 2000);
-  });
-});
+// const signUpSubmitBtn = $("#submit");
+// const signUpSuccessModal = $(".success-cont");
+// $(document).ready(() => {
+//   $(signUpSubmitBtn).on("click", (event) => {
+//     $(signUpForm).hide(500);
+//     $(signUpSuccessModal).css("display", "flex");
+//     // window.location.preventDefault(event);
+//     setTimeout(function () {
+//       window.location.replace("../index.php");
+//     }, 2000);
+//   });
+// });
 
 // NAV-LIST SELECTED STYLE
 $(document).ready(() => {

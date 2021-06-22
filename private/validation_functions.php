@@ -55,12 +55,42 @@ function has_valid_email($value) {
     return preg_match($email_regex, $value) === 1;
 }
 
-function validate_form($data) {
+$missing = '';
+function validate_form($subject) {
     $errors = [];
 
-    if(is_blank("gfname")) {
-        
+    if(is_blank($subject['gfname']) || is_blank($subject['glname'])) {
+        $missing = "Parent/Guardian First and Last Name";
+        $errors[] = $missing . " Must Be Filled Out.";
     }
+
+    if(is_blank($subject['pfname']) || is_blank($subject['plname'])) {
+        $missing = "Player First and Last Name";
+        $errors[] = $missing . " Must Be Filled Out.";
+    }
+
+
+    if(!isset($subject['throws'])) {
+        $errors[] = "Must Click One Option For Throws.";
+    }
+
+    if(!isset($subject['bats'])) {
+        $errors[] = "Must Click One Option For Bats.";
+    }
+
+    if(is_blank($subject['email']) || !has_valid_email($subject['email'])) {
+        $errors[] = "Must Enter a Valid Email.";
+    }
+
+    if(is_blank($subject['number'])) {
+        $errors[] = "Phone Number Must Be Filled Out.";
+    }
+
+    if(is_blank($subject['bday'])) {
+        $errors[] = "A Valid Birthday Must Be Set.";
+    }
+
+    return $errors;
 }
 
 ?>
