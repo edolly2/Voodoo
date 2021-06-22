@@ -1,5 +1,12 @@
+// Returns path only (/path/example.html)
+let pathname = window.location.pathname;
+// Returns full URL (https://example.com/path/example.html)
+let url = window.location.href;
+// Returns base URL (https://example.com)
+let origin = window.location.origin;
 
 // HOME PAGE SIGN UP CLICK REDIRECT AND FORM EXIT REDIRECT BACK TO HOME
+
 const mainBtn = $(".main-btn");
 const formExitBtn = $(".form-exit-btn");
 $(document).ready(() => {
@@ -9,7 +16,7 @@ $(document).ready(() => {
 
   $(formExitBtn).on("click", () => {
     window.location.replace("../index.php");
-  })
+  });
 });
 
 // CANCEL SIGN UP WITH ALERT AND REDIRECT
@@ -24,18 +31,63 @@ $(document).ready(() => {
     $(signUpForm).hide(500);
     $(signUpCancelModal).css("display", "flex");
     $(confirmCancelBtn).on("click", (e) => {
-      if($(e.target).hasClass("yes")) {
+      if ($(e.target).hasClass("yes")) {
         $(confirmCancelBtn).hide();
         $(areYouSurePara).hide();
         $(confirmCancelPara).delay(500).fadeIn(200);
-        setTimeout(function() {
+        setTimeout(function () {
           window.location.replace("../index.php");
-        },2000);
-      }
-      else if($(e.target).hasClass("no")) {
+        }, 2000);
+      } else if ($(e.target).hasClass("no")) {
         $(signUpCancelModal).hide(500);
         $(signUpForm).show(500);
       }
-    })
-  })
+    });
+  });
+});
+
+// const signUpSubmitBtn = $("#submit");
+// const signUpSuccessModal = $(".success-cont");
+// $(document).ready(() => {
+//   $(signUpSubmitBtn).on("click", (event) => {
+//     $(signUpForm).hide(500);
+//     $(signUpSuccessModal).css("display", "block");
+//     window.location.preventDefault(event);
+//     setTimeout(function () {
+//       window.location.replace("../index.php");
+//     }, 2000);
+//   });
+// });
+
+// NAV-LIST SELECTED STYLE
+$(document).ready(() => {
+  if (pathname == "/sandbox/VOODOO/public/index.php") {
+    $("#home").addClass("nav-selected");
+  } else {
+    $("#home").removeClass("nav-selected");
+  }
+
+  if (pathname == "/sandbox/VOODOO/public/about/index.php") {
+    $("#about").addClass("nav-selected");
+  } else {
+    $("#about").removeClass("nav-selected");
+  }
+
+  if (pathname == "/sandbox/VOODOO/public/contact/index.php") {
+    $("#contact").addClass("nav-selected");
+  } else {
+    $("#contact").removeClass("nav-selected");
+  }
+
+  if (pathname == "/sandbox/VOODOO/public/pricing/index.php") {
+    $("#pricing").addClass("nav-selected");
+  } else {
+    $("#pricing").removeClass("nav-selected");
+  }
+
+  if (pathname == "/sandbox/VOODOO/public/sign-up/index.php") {
+    $("#signup").addClass("nav-selected");
+  } else {
+    $("#signup").removeClass("nav-selected");
+  }
 });

@@ -62,6 +62,7 @@ main {
 .form-title,
 .signup-cancel-p1,
 .signup-cancel-p2,
+.success-p1,
 .contact-icons h3 {
   padding: 2rem 2rem 1rem 2rem;
   font-family: nosifer;
@@ -284,7 +285,6 @@ button {
     -1px 1px 6px lime, 1px -1px 6px lime, 0px 6px 6px lime, 6px 0px 6px lime,
     -6px 0px 6px lime, 0px -6px 6px lime, 0px 1px 6px lime, 1px 0px 6px lime,
     0px -1px 6px lime, -1px 0px 6px lime, 0px 0px 6px lime, 5px 5px 10px black;
-  cursor: url("../assets/images/zombie-hand.png"), auto;
 }
 
 .logo-cont,
@@ -540,7 +540,8 @@ a {
   color: #ff004e;
 }
 
-.signup-cancel-cont {
+.signup-cancel-cont,
+.success-cont {
   border-radius: 1.2rem;
   justify-content: center;
   align-items: center;
@@ -563,7 +564,8 @@ a {
 }
 
 .signup-cancel-p2,
-.signup-cancel-p1 {
+.signup-cancel-p1,
+.success-p1 {
   word-spacing: 0.5rem;
 }
 
@@ -644,4 +646,20 @@ dt {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nav-selected {
+    text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+      1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+      1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+      -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+      -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+      -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+      0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black, 6px 6px 6px lime,
+      -6px 6px 6px lime, 6px -6px 6px lime, 1px 6px 6px lime, 6px 1px 6px lime,
+      -1px 6px 6px lime, 6px -1px 6px lime, 1px -6px 6px lime, -6px 1px 6px lime,
+      -1px -6px 6px lime, -6px -1px 6px lime, 1px 1px 6px lime, -1px -1px 6px lime,
+      -1px 1px 6px lime, 1px -1px 6px lime, 0px 6px 6px lime, 6px 0px 6px lime,
+      -6px 0px 6px lime, 0px -6px 6px lime, 0px 1px 6px lime, 1px 0px 6px lime,
+      0px -1px 6px lime, -1px 0px 6px lime, 0px 0px 6px lime, 5px 5px 10px black;
 }
