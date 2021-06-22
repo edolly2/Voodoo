@@ -46,18 +46,18 @@ $(document).ready(() => {
   });
 });
 
-// const signUpSubmitBtn = $("#submit");
-// const signUpSuccessModal = $(".success-cont");
-// $(document).ready(() => {
-//   $(signUpSubmitBtn).on("click", (event) => {
-//     $(signUpForm).hide(500);
-//     $(signUpSuccessModal).css("display", "block");
-//     window.location.preventDefault(event);
-//     setTimeout(function () {
-//       window.location.replace("../index.php");
-//     }, 2000);
-//   });
-// });
+const signUpSubmitBtn = $("#submit");
+const signUpSuccessModal = $(".success-cont");
+$(document).ready(() => {
+  $(signUpSubmitBtn).on("click", (event) => {
+    $(signUpForm).hide(500);
+    $(signUpSuccessModal).css("display", "flex");
+    // window.location.preventDefault(event);
+    setTimeout(function () {
+      window.location.replace("../index.php");
+    }, 2000);
+  });
+});
 
 // NAV-LIST SELECTED STYLE
 $(document).ready(() => {
@@ -90,4 +90,37 @@ $(document).ready(() => {
   } else {
     $("#signup").removeClass("nav-selected");
   }
+});
+
+const contactIcon = $('.con-icon');
+$(document).ready(() => {
+  $(contactIcon).on("click", (e) => {
+    if($(e.target).hasClass("con-email")) {
+      $(".email-info").css("visibility", "visible");
+    }
+    else {
+      $(".email-info").css("visibility", "hidden");
+    }
+
+    if($(e.target).hasClass("con-call")) {
+      $(".call-info").css("visibility", "visible");
+    }
+    else {
+      $(".call-info").css("visibility", "hidden");
+    }
+
+    if($(e.target).hasClass("con-message")) {
+      $(".message-modal").show(500);
+    }
+    else {
+      $(".message-modal").hide(500);
+    }
+  })
+});
+
+const messageExitBtn = $(".message-exit-btn");
+$(document).ready(() => {
+  $(messageExitBtn).on("click", () => {
+    $('.message-modal').hide(500);
+  });
 });

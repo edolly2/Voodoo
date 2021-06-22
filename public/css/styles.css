@@ -432,7 +432,9 @@ a {
   font-size: 4rem;
 }
 
-.form-exit-btn {
+.form-exit-btn,
+.message-exit-btn,
+.contact-icons i {
   color: lime;
   text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
     1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
@@ -443,7 +445,9 @@ a {
     5px 5px 10px black;
 }
 
-.form-exit-btn:hover {
+.form-exit-btn:hover,
+.contact-icons i:hover,
+.message-exit-btn:hover {
   text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
     1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
     1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
@@ -500,7 +504,8 @@ a {
 }
 
 #submit,
-#cancel {
+#cancel,
+#send {
   width: 12rem;
   margin: 0 1rem;
   height: 3.6rem;
@@ -515,7 +520,8 @@ a {
 }
 
 #submit:hover,
-#cancel:hover {
+#cancel:hover,
+#send:hover {
   box-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
     1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
     1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
@@ -629,37 +635,113 @@ dt {
 }
 .contact-icons-cont {
   background-color: rgb(83, 0, 83);
-  width: 80%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 1.2rem;
+  border: 2px solid black;
+  box-shadow: inset 0 0 100px black;
+  word-spacing: 0.5rem;
 }
 
 /* .contact-icons h2 {
   font-family: nosifer;
 } */
 
+.contact-icons i {
+  padding: 1rem;
+}
+
 .contact-wrapper {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 40%;
   display: flex;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -60%);
   justify-content: center;
   align-items: center;
+  /* padding: 4rem; */
 }
 
 .nav-selected {
-    text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
-      1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
-      1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
-      -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
-      -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
-      -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
-      0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black, 6px 6px 6px lime,
-      -6px 6px 6px lime, 6px -6px 6px lime, 1px 6px 6px lime, 6px 1px 6px lime,
-      -1px 6px 6px lime, 6px -1px 6px lime, 1px -6px 6px lime, -6px 1px 6px lime,
-      -1px -6px 6px lime, -6px -1px 6px lime, 1px 1px 6px lime, -1px -1px 6px lime,
-      -1px 1px 6px lime, 1px -1px 6px lime, 0px 6px 6px lime, 6px 0px 6px lime,
-      -6px 0px 6px lime, 0px -6px 6px lime, 0px 1px 6px lime, 1px 0px 6px lime,
-      0px -1px 6px lime, -1px 0px 6px lime, 0px 0px 6px lime, 5px 5px 10px black;
+  text-shadow: 2px 2px 2px black, -2px 2px 2px black, 2px -2px 2px black,
+    1px 2px 2px black, 2px 1px 2px black, -1px 2px 2px black, 2px -1px 2px black,
+    1px -2px 2px black, -2px 1px 2px black, -1px -2px 2px black,
+    -2px -1px 2px black, 1px 1px 2px black, -1px -1px 2px black,
+    -1px 1px 2px black, 1px -1px 2px black, 0px 2px 2px black, 2px 0px 2px black,
+    -2px 0px 2px black, 0px -2px 2px black, 0px 1px 2px black, 1px 0px 2px black,
+    0px -1px 2px black, -1px 0px 2px black, 0px 0px 2px black, 6px 6px 6px lime,
+    -6px 6px 6px lime, 6px -6px 6px lime, 1px 6px 6px lime, 6px 1px 6px lime,
+    -1px 6px 6px lime, 6px -1px 6px lime, 1px -6px 6px lime, -6px 1px 6px lime,
+    -1px -6px 6px lime, -6px -1px 6px lime, 1px 1px 6px lime, -1px -1px 6px lime,
+    -1px 1px 6px lime, 1px -1px 6px lime, 0px 6px 6px lime, 6px 0px 6px lime,
+    -6px 0px 6px lime, 0px -6px 6px lime, 0px 1px 6px lime, 1px 0px 6px lime,
+    0px -1px 6px lime, -1px 0px 6px lime, 0px 0px 6px lime, 5px 5px 10px black;
+}
+
+hr {
+  width: 50%;
+  margin: auto;
+}
+
+.info {
+  text-align: center;
+  visibility: hidden;
+}
+
+.info h3 {
+  word-wrap: none;
+}
+
+.message-modal {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -60%);
+  border-radius: 1.2rem;
+  width: 60%;
+  height: 140%;
+  text-align: center;
+  display: none;
+  background-color: rgb(41, 41, 41);
+  box-shadow: inset 0 0 100px black, 0px 0px 60px black;
+  border: 2px solid black;
+}
+
+.con-message-form {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -70%);
+}
+
+textarea {
+  border-radius: 1.2rem;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+textarea:focus {
+  outline: none;
+  border: 2px solid rgb(255, 0, 78);
+}
+
+#send {
+  margin-top: 2rem;
+}
+
+.message-modal h3 {
+  padding: 2rem;
+  font-size: 2.4rem;
+}
+
+.message-exit-btn-cont {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  font-size: 4rem;
 }
