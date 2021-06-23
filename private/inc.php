@@ -21,5 +21,5 @@ require_once "validation_functions.php";
 
 // CONNECT TO DB AUTOMATICALLY AND CLOSE DB
 $db = db_connect();
-
+$errors = [];
 ?>

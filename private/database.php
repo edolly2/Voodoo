@@ -14,7 +14,12 @@ function db_disconnect($connection) {
     if(isset($connection)) {
         mysqli_close($connection);
     }
-} 
+}
+
+// SANITIZE SQL
+function db_escape($connection, $string) {
+    return mysqli_real_escape_string($connection, $string);
+}
 
 // CONFIRM DB CONNECTION WAS SUCCESSFUL
 function db_confirm_connect() {
